@@ -9,6 +9,10 @@
   --background-card: #170b2a;
 }
 
+.loser {
+  opacity: 0.3;
+}
+
 ul {
   font-size: 30px;
   list-style: none;
