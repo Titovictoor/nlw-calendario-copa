@@ -1,3 +1,12 @@
+/* ********************** FUNCTION QUE REALIZA O CLICK DO MENU RESPONSIVO **************** */
+const burguerInput = document.getElementById("burguer-input")
+
+function toggleMenu() {
+  const menu = document.getElementById("menu")
+  menu.classList.toggle("active")
+}
+
+burguerInput.addEventListener("click", toggleMenu)
 /* ***********************FUNCTION QUE CRIA O JOGO ******************* */
 function createGame(player1, date, score, player2) {
   const contentToDisplay = score ? score : date
@@ -12,7 +21,6 @@ function createGame(player1, date, score, player2) {
 }
 /* ***************** FUNCTION DEFINE VENCEDOR **************** */
 function calculateWinner(score) {
-  console.log(score)
   if (!score) {
     return ""
   }
@@ -40,9 +48,9 @@ document.querySelector("#cards").innerHTML =
   createCard("21/11", "segunda", createGame("netherlands", "", "2 x 0", "senegal")) +
   createCard("22/11", "terça", createGame("argentina", "", "1 x 2", "saudiarabia") + createGame("france", "", "4 x 1", "australia")) +
   createCard("23/11", "quarta", createGame("germany", "", "1 x 2", "japan") + createGame("spain", "13:00", "7 x 0", "costarica")) +
-  createCard("24/11", "quinta", createGame("brazil", "16:00", "", "serbia") + createGame("portugal", "13:00", "", "ghana")) +
-  createCard("25/11", "sexta", createGame("netherlands", "13:00", "", "equador")) +
-  createCard("26/11", "sábado", createGame("france", "13:00", "", "denmark") + createGame("argentina", "16:00", "", "mexico")) +
+  createCard("24/11", "quinta", createGame("brazil", "16:00", "2 x 0", "serbia") + createGame("portugal", "13:00", "3 x 2", "ghana")) +
+  createCard("25/11", "sexta", createGame("netherlands", "13:00", "1 x 1", "equador")) +
+  createCard("26/11", "sábado", createGame("france", "13:00", "2 x 1", "denmark") + createGame("argentina", "16:00", "2 x 0", "mexico")) +
   createCard("27/11", "domingo", createGame("spain", "16:00", "", "germany")) +
   createCard("28/11", "segunda", createGame("switzerland", "13:00", "", "brazil") + createGame("portugal", "16:00", "", "uruguay")) +
   createCard("29/11", "terça", createGame("netherlands", "12:00", "", "qatar")) +

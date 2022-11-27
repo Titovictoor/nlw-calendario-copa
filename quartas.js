@@ -1,3 +1,12 @@
+const burguerInput = document.getElementById("burguer-input")
+
+function toggleMenu() {
+  const menu = document.getElementById("menu")
+  menu.classList.toggle("active")
+}
+
+burguerInput.addEventListener("click", toggleMenu)
+
 function createGame(player1, hour, player2) {
   return `
     <li>
@@ -19,13 +28,5 @@ function createCard(date, day, games) {
 }
 
 document.querySelector("#cards").innerHTML =
-  createCard(
-    "09/12",
-    "sexta",
-    createGame("bola", "12:00", "bola") + createGame("bola", "16:00", "bola")
-  ) +
-  createCard(
-    "10/12",
-    "sábado",
-    createGame("bola", "12:00", "bola") + createGame("bola", "16:00", "bola")
-  )
+  createCard("09/12", "sexta", createGame("bola", "12:00", "bola") + createGame("bola", "16:00", "bola")) +
+  createCard("10/12", "sábado", createGame("bola", "12:00", "bola") + createGame("bola", "16:00", "bola"))
